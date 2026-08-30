@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite the manuscript. The arXiv identifier will be added after posting."
+title: "Repair Identifiability and Product-Measurement Complexity of Bond Failures in Graph States"
+type: software
+authors:
+  - family-names: Nadiger
+    given-names: Ayush
+    orcid: "https://orcid.org/0009-0009-0967-7951"
+version: "v10"
+date-released: 2026-08-30
+url: "https://github.com/ayushnadiger/repair-identifiability"
+repository-code: "https://github.com/ayushnadiger/repair-identifiability"
