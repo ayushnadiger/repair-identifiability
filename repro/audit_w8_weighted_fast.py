@@ -27,6 +27,7 @@ def prep(mode):
     return sep,wt,full,len(H)
 
 def context_codes(b):
+    # all subset products; local X=0,Y=1,Z=2
     gens=[]
     for v,t in enumerate(b):
       if t==0: x,z=1<<v,0
@@ -61,12 +62,14 @@ def mincover(d,full,maxk=3):
   maxi=prune(d)
   for M,b in maxi:
     if M==full:return 1,[b],len(d),len(maxi)
+  # exact two cover
   for i,(M,b) in enumerate(maxi):
     need=full^M
     for j in range(i,len(maxi)):
       Q,bq=maxi[j]
       if need & ~Q ==0:return 2,[b,bq],len(d),len(maxi)
   if maxk<3:return '>2',None,len(d),len(maxi)
+  # exact three via uncovered-pair candidate lists recursive
   np=full.bit_length(); cand=[[] for _ in range(np)]
   for idx,(M,b) in enumerate(maxi):
     x=M
