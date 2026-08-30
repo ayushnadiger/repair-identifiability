@@ -10,3 +10,4 @@ version: "v10"
 date-released: 2026-08-30
 url: "https://github.com/ayushnadiger/repair-identifiability"
 repository-code: "https://github.com/ayushnadiger/repair-identifiability"
+license: MIT
